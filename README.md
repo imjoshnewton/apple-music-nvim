@@ -16,11 +16,12 @@ Control Apple Music and manage playlists directly from Neovim with `applemusicnv
 
 If you are using [lazy.nvim](https://github.com/folke/lazy.nvim), add the following to your Neovim configuration:
 
-````lua
+```lua
 {
   'imjoshnewton/applemusicnvim',
   dependencies = { {'nvim-telescope/telescope.nvim'} }
 }
+```
 
 ### Using packer.nvim
 
@@ -31,7 +32,7 @@ use {
   'imjoshnewton/applemusicnvim',
   requires = { {'nvim-telescope/telescope.nvim'} }
 }
-````
+```
 
 ### Using vim-plug
 

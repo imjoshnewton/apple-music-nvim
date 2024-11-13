@@ -1,5 +1,3 @@
-vim.notify = require("notify")
-
 -- Apple Music integration
 local function playMusic(arg)
 	local trackInfoCmd =
@@ -21,7 +19,7 @@ local function playMusic(arg)
 			end)
 		end
 		local trackInfo = vim.fn.system(trackInfoCmd)
-		vim.notify(trackInfo, "info", { title = "Apple Music", icon = "󰝚", render = "wrapped-compact" })
+		Snacks.notify(trackInfo, "info", { title = "Apple Music", icon = "󰝚", render = "wrapped-compact" })
 		--print(trackInfo)
 	end
 end
@@ -44,7 +42,7 @@ local function toggle_mute()
 
 	-- Display the result as a notification
 	-- vim.notify("System volume is now: " .. result, "info")
-	vim.notify(
+	Snacks.notify(
 		"System volume is now: " .. result,
 		"info",
 		{ title = "System", icon = "", render = "wrapped-compact" }

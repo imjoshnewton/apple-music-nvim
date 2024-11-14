@@ -19,7 +19,7 @@ local function playMusic(arg)
 			end)
 		end
 		local trackInfo = vim.fn.system(trackInfoCmd)
-		Snacks.notify(trackInfo, "info", { title = "Apple Music", icon = "󰝚", render = "wrapped-compact" })
+		Snacks.notifier(trackInfo, "info", { title = "Apple Music", icon = "󰝚", render = "wrapped-compact" })
 		--print(trackInfo)
 	end
 end
@@ -42,7 +42,7 @@ local function toggle_mute()
 
 	-- Display the result as a notification
 	-- vim.notify("System volume is now: " .. result, "info")
-	Snacks.notify(
+	Snacks.notifier(
 		"System volume is now: " .. result,
 		"info",
 		{ title = "System", icon = "", render = "wrapped-compact" }
